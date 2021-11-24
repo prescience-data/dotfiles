@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/htmlhint",
+  "attr-name-style": "dash",
+  "attr-no-dup": true,
+  "attr-quote-style": "double",
+  "attr-req-value": true,
+  "attr-validate": true,
+  "class-no-dup": true,
+  "doctype-first": true,
+  "doctype-html5": true,
+  "html-req-lang": true,
+  "id-class-style": "dash",
+  "id-no-dup": true,
+  "img-req-alt": true,
+  "img-req-src": true,
+  "indent-style": false,
+  "indent-width": false,
+  "input-radio-req-name": true,
+  "input-req-label": true,
+  "label-req-for": true,
+  "line-end-style": false,
+  "tag-bans": [
+    "!style"
+  ],
+  "title-max-len": 120
+}

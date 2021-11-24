@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@prescience/dotfiles",
+  "version": "1.0.0",
+  "description": "Dotfiles for reducing noise across projects.",
+  "keywords": [
+    "dotfiles",
+    "configs",
+    "settings"
+  ],
+  "homepage": "https://github.com/prescience-data/dotfiles",
+  "bugs": "https://github.com/prescience-data/dotfiles/issues",
+  "repository": "https://github.com/prescience-data/dotfiles",
+  "license": "MIT",
+  "author": "prescience",
+  "files": [
+    "configs"
+  ],
+  "engines": {
+    "node": ">=14"
+  }
+}

@@ -1,0 +1,12 @@
+*.md
+.dockerignore
+.env.example
+.git*
+.heft/
+.idea/
+.vscode/
+docker-compose.yml
+Dockerfile
+node_modules/
+temp/
+tmp/

@@ -1,0 +1,7 @@
+*.js
+*.json
+*.yml
+bin/
+dist/
+lib/
+node_modules/
