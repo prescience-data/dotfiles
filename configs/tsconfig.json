@@ -1,50 +1,47 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "declarationMap": true,
+    /* Language & Emit */
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+
+    /* Interop */
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "inlineSources": true,
-    "lib": [
-      "ESNext",
-      "ESNext.BigInt",
-      "ESNext.Promise",
-      "ESNext.String",
-      "ES2020.Symbol.WellKnown",
-      "DOM.Iterable",
-      "DOM"
-    ],
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
+    /* Type Safety */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": false,
+
+    /* Lint-like checks */
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
+    "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "lib",
+
+    /* Project hygiene */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "newLine": "lf",
+
+    /* DX */
     "pretty": true,
-    "removeComments": false,
-    "resolveJsonModule": true,
-    "rootDir": "src",
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "target": "ESNext",
-    "types": [
-      "node"
-    ]
+
+    /* Types */
+    "types": ["node", "@cloudflare/workers-types", "@types/jest"],
+
+    /* Modern TS */
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "lib",
-    "dist",
-    "bin",
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "lib", "temp", ".output"]
 }
