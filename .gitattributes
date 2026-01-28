@@ -1,2 +1,72 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+###############################################################################
+# Defaults
+###############################################################################
+# Normalize text files and enforce LF by default (works well cross-platform).
+* text=auto eol=lf
+
+###############################################################################
+# Lockfiles / generated dependency metadata (never auto-merge)
+###############################################################################
+pnpm-lock.yaml        -text merge=binary
+package-lock.json     -text merge=binary
+npm-shrinkwrap.json   -text merge=binary
+shrinkwrap.yaml       -text merge=binary
+yarn.lock             -text merge=binary
+bun.lockb             -text merge=binary
+
+###############################################################################
+# Source files (explicitly text; LF)
+###############################################################################
+*.js     text eol=lf
+*.cjs    text eol=lf
+*.mjs    text eol=lf
+*.ts     text eol=lf
+*.cts    text eol=lf
+*.mts    text eol=lf
+*.jsx    text eol=lf
+*.tsx    text eol=lf
+*.vue    text eol=lf
+*.css    text eol=lf
+*.scss   text eol=lf
+*.sass   text eol=lf
+*.less   text eol=lf
+*.html   text eol=lf
+*.json   text eol=lf
+*.jsonc  text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.sh     text eol=lf
+
+###############################################################################
+# Windows scripts (CRLF)
+###############################################################################
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+*.ps1    text eol=crlf
+
+###############################################################################
+# Binary assets (prevent eol/text transforms)
+###############################################################################
+*.png    -text
+*.jpg    -text
+*.jpeg   -text
+*.gif    -text
+*.webp   -text
+*.ico    -text
+*.pdf    -text
+*.zip    -text
+*.gz     -text
+*.7z     -text
+*.woff   -text
+*.woff2  -text
+*.ttf    -text
+*.eot    -text
+
+###############################################################################
+# Linguist overrides
+###############################################################################
+# Let JSONC be treated as "JSON with comments" (handy in GitHub language stats).
+*.jsonc  linguist-language=JSON-with-Comments
+# Keep plain JSON as JSON (don’t misclassify all JSON as commented JSON).
+# (*.json stays default)
