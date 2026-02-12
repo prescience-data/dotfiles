@@ -6,7 +6,7 @@ export default {
   semi: false,
   singleQuote: false,
   jsxSingleQuote: false,
-  trailingComma: "es5",
+  trailingComma: "none",
   bracketSpacing: true,
   arrowParens: "always",
 
